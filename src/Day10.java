@@ -1,22 +1,20 @@
-import java.util.ArrayList;
+import java.util.LinkedList;
+
 public class Day10 {
-    public static void main(){
-        ArrayList<String> students = new ArrayList<>();
-        students.add("Joseph");
-        students.add("Subasree");
-        students.add("Vishnu");
-        students.add("Archana");
-        students.add("Srinithi");
-        System.out.println("Student List:");
-        for (String s : students) {
-            System.out.println(s);
-        }
-        students.remove("Archana");
-        System.out.println("\nAfter Removing Archana:");
-        for (String s : students) {
-            System.out.println(s);
+    static void main() {
+        LinkedList<String> queue = new LinkedList<String>();
+        queue.add("Deepu");
+        queue.add("Harsha");
+        queue.add("Vimla");
+        queue.add("Manisha");
+        queue.add("Ishika");
+        while(!queue.isEmpty()) {
+            process(queue);
         }
     }
+    static void process(LinkedList<String> queue){
+        String removed=queue.removeFirst();
+        System.out.println("Removed:"+removed);
+
+    }
 }
-
-
